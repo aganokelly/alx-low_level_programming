@@ -5,14 +5,15 @@
  *
  * Return: always 0
  */
+
 int main(void)
 {
-	char i;
+	char bi;
 
-	for (i = "a" ; i <= "z" ; i++)
-		putchar(i);
-	for (i = "A" ; i <= "Z" ; i++)
-		putchar(i);
-	putchar("\n");
+	for (bi = 'a' ; bi <= 'z' ; bi++)
+		putchar(bi);
+	for (bi = 'A' ; bi <= 'Z' ; bi++)
+		putchar(bi);
+	putchar('\n');
 	return (0);
 }
