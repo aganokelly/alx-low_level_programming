@@ -2,33 +2,37 @@
 
 /**
  * times_table - prints tables
+ * Return: empty output
  */
 
 void times_table(void)
 {
-	int i, j, k;
+	int i, j, k, u, d;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i <= 9 ; i++)
 	{
-		for (j = 0 ; j < 10 ; j++)
+		for (j = 0 ; j <= 9 ; j++)
 		{
 			k = j * i;
-			if (j == 0)
+			if (k > 9)
 			{
-				_putchar(k + '0');
+				u = k % 10;
+				d = (k - u) / 10;
+				_putchar(44);
+				_putchar(32);
+				_putchar(d + '0');
+				_putchar(u + '0');
 			}
-			if (k < 10 && j != 0)
+			else
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+			if (j != 0)
+			{
+				_putchar(44);
+				_putchar(32);
+				_putchar(32);
+			}
 				_putchar(k + '0');
-			} else if (k >= 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((k / 10) + '0');
-			_putchar((k % 10) + '0');
+
 			}
 		}
 	}	_putchar('\n');
