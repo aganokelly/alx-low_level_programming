@@ -8,7 +8,7 @@
  * Return: sqrt of number of -1 for error
  */
 
-int sqfunction(int num, int psqrt)
+int sqFunction(int num, int psqrt)
 {
 	if ((psqrt * psqrt) == num)
 	{
@@ -19,7 +19,7 @@ int sqfunction(int num, int psqrt)
 		if ((psqrt * psqrt) > num)
 			return (-1);
 		else
-			return (sqfunction(num, psqrt + 1));
+			return (sqFunction(num, psqrt + 1));
 	}
 }
 /**
@@ -34,5 +34,5 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 	else
-		return (sqfunction(n, 0));
+		return (sqFunction(n, 0));
 }
