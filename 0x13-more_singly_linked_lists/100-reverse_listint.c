@@ -22,7 +22,7 @@ listint_t *reverse_listint(listint_t **head)
 		past = *head;
 		*head = future;
 	}
-	*head = past;
+	(*head)->next = past;
 
 	return (*head);
 }
